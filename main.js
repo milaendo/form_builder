@@ -110,16 +110,16 @@ formData.forEach (function(item) {
   }  
  
   if (item.type === 'select') {
-    htmlStr += `<select id= ${item.id}>`
-    htmlStr += `<option value=''>${item.label}<option>`
+    htmlStr += `<select id= "${item.id}">`
+    htmlStr += `<option value=''>${item.label}</option>`
     item.options.forEach (function(option) {
-      htmlStr += `<option value ='${option.value}'> "${option.label}" </option> `
+      htmlStr += `<option value='${option.value}'> ${option.label} </option> `
     })
     htmlStr += '</select>'
   }
 
   if (item.type === 'textarea') {
-    htmlStr += `<textarea id=${item.id} placeholder= "${item.label}"></textarea>`
+    htmlStr += `<textarea id='${item.id}' placeholder= "${item.label}"></textarea>`
   }
 }) 
   
